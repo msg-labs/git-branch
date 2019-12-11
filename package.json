@@ -1,6 +1,6 @@
 {
   "name": "git-branch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Move branch from your terminal with ease",
   "main": "index.js",
   "scripts": {
