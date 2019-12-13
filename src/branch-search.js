@@ -13,7 +13,7 @@ const deleteEnd = -1;
 const branchSearch = ( branches, input = '' ) => ( {
 
     add ( val ) {
-        this.searchInput = `${ this.searchInput }${ val }`;
+        this.searchInput = `${ this.input }${ val }`;
     },
 
     get branches () {
@@ -21,12 +21,7 @@ const branchSearch = ( branches, input = '' ) => ( {
     },
 
     delete () {
-        this.searchInput = this.searchInput.slice( deleteStart, deleteEnd );
-
-    },
-
-    set input ( value ) {
-        return value === 'backspace' ? this.delete() : this.add( value );
+        this.searchInput = this.input.slice( deleteStart, deleteEnd );
     },
 
     get input () {
