@@ -1,6 +1,10 @@
 # git-branch
 
-Move branch from your terminal with ease
+> Move branch from your terminal with ease.
+
+Git branch allows you to interactively search a branch name on the current
+git repository. It displays a list of candidates and a promp to filter the
+results.
 
 ## Tips
 
@@ -15,7 +19,10 @@ alias b="msg-git-branch"
 
 In no special order I'd like to have:
 
+* Handle all of the issues below from the github projects tab
 * Testing
+* Limit the initial output to the first ten branches
+* Flag merged
 * .gif with a demo of the functionality
 * Accepts a default filter
 * Remote branches

@@ -5,7 +5,9 @@ const readLine = require( 'readline' );
 // Application
 const {
     write,
-    escape
+    escape,
+    getSequence,
+    characters
 } = require( './utils.js' );
 const renderCandidates = require( './render-candidates.js' );
 
@@ -40,7 +42,6 @@ const onCtrlC = () => {
     process.exit( EXIT_CODES.ok );
 };
 
-
 const onReturn = () => {
     escape( 'cursorPrevLine' );
     write( '\n' );
@@ -48,13 +49,16 @@ const onReturn = () => {
     process.stdin.pause();
 };
 
-const onDelete = () => {
+const onDelete = search => {
+    if ( search.input.length ) {
+        const previousCharacter = 1;
 
-    const previousCharacter = 1;
+        escape( 'cursorBackward', previousCharacter );
+        escape( 'eraseEndLine' );
 
-    escape( 'cursorBackward', previousCharacter );
-    escape( 'eraseEndLine' );
-
+        search.delete();
+        printCandidates( search.branches );
+    }
 };
 
 const rpl = search => new Promise( ( resolve, reject ) => {
@@ -65,30 +69,25 @@ const rpl = search => new Promise( ( resolve, reject ) => {
 
     process.stdin.on( 'keypress', ( character, key ) => {
 
-        if ( key.sequence === '\u0003' ) {
-            onCtrlC();
-            return;
+        const sequence = getSequence( key );
+
+        switch ( sequence ) {
+            case characters.ESC :
+            case characters.CTRLC :
+                onCtrlC();
+                break;
+            case characters.RETURN :
+                onReturn();
+                resolve( search.result );
+                break;
+            case characters.BACKSPACE :
+                onDelete( search );
+                break;
+            default :
+                write( character );
+                search.add( sequence );
+                printCandidates( search.branches );
         }
-
-        if ( key.name === 'backspace' ) {
-
-            if ( !search.input.length ) {
-                return;
-            }
-
-            onDelete();
-        }
-
-        if ( key.name === 'return' ) {
-            onReturn();
-            resolve( search.result );
-            return;
-        }
-
-        write( character );
-        search.input = key.name;
-
-        printCandidates( search.branches );
 
     } );
 
