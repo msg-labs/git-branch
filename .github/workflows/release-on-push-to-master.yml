@@ -8,9 +8,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo & set up user name
     - uses: actions/checkout@v1
-    - name: Setting up node
     - uses: actions/setup-node@v1
     - name: Installing dependencies
       run: npm ci
@@ -22,7 +20,6 @@ jobs:
         git config --local user.name "Miguel Sanchez Gonzalez"
     - name: Releasing
       run: npm run release
-    - name: Pushing to master
     - uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
