@@ -1,19 +1,21 @@
 name: Test on push CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
 
 jobs:
-  build:
+
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Setup Node 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: npm install and test
-      run: |
-        npm ci
-        npm test
-      env:
-        CI: true
+    - uses: actions/setup-node@v1
+    - name: Installing dependencies
+      run: npm ci
+    - name: Linting project
+      run: npm run lint
+    - name: Running tests
+      run: npm test
