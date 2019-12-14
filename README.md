@@ -19,6 +19,7 @@ alias b="msg-git-branch"
 
 In no special order I'd like to have:
 
+* Highlight currently matched substring on each candidate
 * Handle all of the issues below from the github projects tab
 * Testing
 * Limit the initial output to the first ten branches
