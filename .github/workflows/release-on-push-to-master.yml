@@ -23,7 +23,7 @@ jobs:
     - name: Releasing
       run: npm run release
     - name: Pushing to master
-      uses: ad-m/github-push-action@master
+    - uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
       
