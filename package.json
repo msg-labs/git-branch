@@ -1,6 +1,6 @@
 {
     "name": "@msg-labs/git-branch",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Move branch from your terminal with ease",
     "main": "index.js",
     "scripts": {
