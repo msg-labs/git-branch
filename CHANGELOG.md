@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/msg-labs/git-branch/compare/v1.0.6...v1.1.0) (2020-01-19)
+
+
+### Features
+
+* replaces custom prompt with external library ([#6](https://github.com/msg-labs/git-branch/issues/6)) ([6b84ed8](https://github.com/msg-labs/git-branch/commit/6b84ed8027ba0d8e0df7c12b38fafce26b424467))
+
 ### [1.0.6](https://github.com/msg-labs/git-branch/compare/v1.0.5...v1.0.6) (2019-12-14)
 
 ### [1.0.5](https://github.com/msg-labs/git-branch/compare/v1.0.4...v1.0.5) (2019-12-14)
