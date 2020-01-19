@@ -33,31 +33,17 @@ const getFormat = branch => {
 };
 
 const first = 0;
-const isFirst = index => index === first;
 
-const getStatus = ( branch, index ) => ( {
-    active: Boolean( branch.active ),
-    selected: isFirst( index )
-} );
+const renderLine = ( branch, index ) => {
 
-const addStatues = ( branch, index ) => ( {
-    ...branch,
-    ...getStatus( branch, index )
-} );
-
-const renderLine = branch => {
-
-    const format = getFormat( branch );
+    const format = getFormat( {
+        active: Boolean( branch.active ),
+        selected: index === first
+    } );
 
     return `${ format.flag } ${ format.color( branch.name ) }`;
 
 };
 
-const generateList = list => list
-    .map( addStatues )
-    .map( renderLine )
-    .join( '\n' );
-
-
-module.exports = generateList;
+module.exports = renderLine;
 
