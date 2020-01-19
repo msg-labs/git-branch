@@ -18,8 +18,8 @@ describe( 'render-candidate', () => {
         expect.assertions( 1 );
 
         const line = renderCandidate( {
-            name: 'test',
-            active: true
+            active: true,
+            name: 'test'
         }, 1 );
 
         expect( line.slice( 0, 2 ) ).toStrictEqual( '* ' );
@@ -31,8 +31,8 @@ describe( 'render-candidate', () => {
         expect.assertions( 1 );
 
         const line = renderCandidate( {
-            name: 'test',
-            active: true
+            active: true,
+            name: 'test'
         }, 0 );
 
         expect( line.slice( 0, 2 ) ).toStrictEqual( '> ' );
