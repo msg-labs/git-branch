@@ -6,13 +6,29 @@ Git branch allows you to interactively search a branch name on the current
 git repository. It displays a list of candidates and a promp to filter the
 results.
 
-## Tips
+## Install
+
+```sh
+npm install -g @msg-labs/git-branch
+```
 
 By default the exported binary name has been made intentionally long so it
 doesn't collide with any other binary. I suggest to shorten it with an alias.
 
 ```sh
 alias b="msg-git-branch"
+```
+
+## Usage
+
+```sh
+msg-git-branch
+```
+
+It also accepts an argument which will be the initial filter for the branch.
+
+```sh
+msg-git-branch ma
 ```
 
 ## Wishlist
@@ -25,7 +41,6 @@ In no special order I'd like to have:
 * Limit the initial output to the first ten branches
 * Flag merged
 * .gif with a demo of the functionality
-* Accepts a default filter
 * Remote branches
 * intelligent switch for package.json
     Checks if there are any differences, if so it could
