@@ -25,5 +25,5 @@ getBranches()
     ) )
     .then( ( { name } ) => name )
     .then( checkout )
-    .then( response => console.log( `${ response }\n` ) )
-    .catch( error => console.log( red( error ) ) );
+    .then( response => process.stdout.write( `${ response }\n` ) )
+    .catch( error => process.stdout.write( red( error ) ) );
