@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/msg-labs/git-branch/compare/v1.1.0...v1.2.0) (2020-01-19)
+
+
+### Features
+
+* allows an initial filter as first parameter ([#7](https://github.com/msg-labs/git-branch/issues/7)) ([66b0259](https://github.com/msg-labs/git-branch/commit/66b02596618ccb7fbb22506ef9805ee1c8d19224))
+
 ## [1.1.0](https://github.com/msg-labs/git-branch/compare/v1.0.6...v1.1.0) (2020-01-19)
 
 
