@@ -12,7 +12,10 @@ const getBranches = require( './src/git/branch.js' );
 const renderCandidate = require( './src/ui/render-candidate.js' );
 
 
+const initialInputArg = 2;
+
 const searchOptions = {
+    input: process.argv[ initialInputArg ] || '',
     matchField: ( { name } ) => name
 };
 
