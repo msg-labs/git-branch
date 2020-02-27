@@ -1,3 +1,4 @@
+const chalk = require( 'chalk' );
 const renderCandidate = require( './render-candidate.js' );
 
 describe( 'render-candidate', () => {
@@ -46,6 +47,28 @@ describe( 'render-candidate', () => {
         const line = renderCandidate( { name: 'test' }, 2 );
 
         expect( line.slice( 0, 2 ) ).toStrictEqual( '  ' );
+
+    } );
+
+    it( 'doesn\'t colorize the output if there is no search', () => {
+
+        expect.assertions( 1 );
+
+        const line = renderCandidate( { name: 'test' }, 1 );
+        const mock = `  ${ chalk.gray( 'test' ) }`;
+
+        expect( line ).toStrictEqual( mock );
+
+    } );
+
+    it( 'highlights the matching portion of the branch name', () => {
+
+        expect.assertions( 1 );
+
+        const line = renderCandidate( { name: 'test' }, 1, [], 'st' );
+        const mock = `  ${ chalk.gray( `te${ chalk.inverse( 'st' ) }` ) }`;
+
+        expect( line ).toStrictEqual( mock );
 
     } );
 
