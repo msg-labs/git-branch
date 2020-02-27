@@ -34,14 +34,16 @@ const getFormat = branch => {
 
 const first = 0;
 
-const renderLine = ( branch, index ) => {
+const renderLine = ( branch, index, candidates, search ) => {
 
     const format = getFormat( {
         active: Boolean( branch.active ),
         selected: index === first
     } );
 
-    return `${ format.flag } ${ format.color( branch.name ) }`;
+    const branchName = branch.name.replace( search, chalk.inverse( search ) );
+
+    return `${ format.flag } ${ format.color( branchName ) }`;
 
 };
 
