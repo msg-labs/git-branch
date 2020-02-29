@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/msg-labs/git-branch/compare/v1.3.0...v1.4.0) (2020-02-29)
+
+
+### Features
+
+* enables limiting the amount of branches displayed ([57edfac](https://github.com/msg-labs/git-branch/commit/57edfacb8ea156fc8eb97b021d439098cb2f984b))
+
 ## [1.3.0](https://github.com/msg-labs/git-branch/compare/v1.2.1...v1.3.0) (2020-02-27)
 
 
