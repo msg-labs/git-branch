@@ -7,15 +7,17 @@ const { red } = require( 'chalk' );
 const prompt = require( '@msg-labs/cli-prompt-list' );
 
 // Application
+const cli = require( './src/ui/cli.js' );
 const checkout = require( './src/git/checkout.js' );
 const getBranches = require( './src/git/branch.js' );
 const renderCandidate = require( './src/ui/render-candidate.js' );
 
 
-const initialInputArg = 2;
+cli.parse( process.argv );
 
 const searchOptions = {
-    input: process.argv[ initialInputArg ] || '',
+    input: cli.search,
+    limit: cli.limit,
     matchField: ( { name } ) => name
 };
 

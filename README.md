@@ -22,22 +22,21 @@ alias b="msg-git-branch"
 ## Usage
 
 ```sh
-msg-git-branch
-```
+Usage: msg-git-branch [options] [search...]
 
-It also accepts an argument which will be the initial filter for the branch.
+Options:
+  -V, --version         output the version number
+  -l, --limit [number]  limits the line outputs (default: 10)
+  -h, --help            output usage information
 
-```sh
-msg-git-branch ma
 ```
 
 ## Wishlist
 
 In no special order I'd like to have:
 
-* Handle all of the issues below from the github projects tab
+* Handle all of the issues below from the Github projects tab
 * Testing
-* Limit the initial output to the first ten branches
 * Flag merged
 * .gif with a demo of the functionality
 * Remote branches
