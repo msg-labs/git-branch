@@ -39,10 +39,11 @@
         "msg-git-branch": "./index.js"
     },
     "dependencies": {
-        "@msg-labs/cli-prompt-list": "1.0.2",
+        "@msg-labs/cli-prompt-list": "1.1.0",
         "@types/jest": "24.9.0",
         "ansi-escapes": "4.3.0",
-        "chalk": "3.0.0"
+        "chalk": "3.0.0",
+        "commander": "4.1.1"
     },
     "husky": {
         "hooks": {
