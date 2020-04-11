@@ -6,6 +6,8 @@ Git branch allows you to interactively search a branch name on the current
 git repository. It displays a list of candidates and a promp to filter the
 results.
 
+![Demo of git-branch](./public/demo.gif):
+
 ## Install
 
 ```sh
