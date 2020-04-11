@@ -40,7 +40,6 @@ In no special order I'd like to have:
 * Handle all of the issues below from the Github projects tab
 * Testing
 * Flag merged
-* .gif with a demo of the functionality
 * Remote branches
 * intelligent switch for package.json
     Checks if there are any differences, if so it could
