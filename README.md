@@ -1,6 +1,6 @@
 # git-branch
 
-> Move branch from your terminal with ease.
+> Navigate git branches with ease
 
 Git branch allows you to interactively search a branch name on the current
 git repository. It displays a list of candidates and a promp to filter the
