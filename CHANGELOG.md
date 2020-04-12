@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/msg-labs/git-branch/compare/v1.4.2...v1.4.3) (2020-04-12)
+
+
+### Bug Fixes
+
+* removes unnecessary git add after linting ([#12](https://github.com/msg-labs/git-branch/issues/12)) ([95843ff](https://github.com/msg-labs/git-branch/commit/95843ff56045f85acd2eb663bfc590d3cebbafba))
+
 ### [1.4.2](https://github.com/msg-labs/git-branch/compare/v1.4.1...v1.4.2) (2020-04-11)
 
 ### [1.4.1](https://github.com/msg-labs/git-branch/compare/v1.4.0...v1.4.1) (2020-03-15)
