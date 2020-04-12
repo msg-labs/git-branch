@@ -1,0 +1,228 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/miguel/github/msg-labs/git-branch
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+    PS1: ' > '
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 100
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 15
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    # type: floating
+    # title: Terminalizer
+    type: solid
+    title: null
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 590
+    content: '> '
+  - delay: 100
+    content: m
+  - delay: 100
+    content: s
+  - delay: 100
+    content: g
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: g
+  - delay: 100
+    content: i
+  - delay: 100
+    content: t
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: b
+  - delay: 100
+    content: r
+  - delay: 100
+    content: a
+  - delay: 100
+    content: 'n'
+  - delay: 100
+    content: c
+  - delay: 100
+    content: h
+  - delay: 100
+    content: "\r\n"
+  - delay: 50
+    content: 'Branch name > '
+  - delay: 7
+    content: "\e[J\r\n> \e[34mchore/update-dependencies\e[39m\r\n  \e[90mdocs/animated-gif\e[39m\r\n  \e[90mfeature/highlight-candidate-match\e[39m\r\n  \e[90mhotfix/duplicate-render\e[39m\r\n  \e[90mhotfix/missing-carriage-return\e[39m\r\n  \e[90mmaster\e[39m\e[6A\e[G\e[14C"
+  - delay: 758
+    content: "m\e[J\r\n> \e[34mdocs/ani\e[7mm\e[27mated-gif\e[39m\r\n  \e[90mfeature/highlight-candidate-\e[7mm\e[27match\e[39m\r\n  \e[90mhotfix/\e[7mm\e[27missing-carriage-return\e[39m\r\n  \e[90m\e[7mm\e[27master\e[39m\e[4A\e[G\e[15C"
+  - delay: 175
+    content: "a\e[J\r\n> \e[34mdocs/ani\e[7mma\e[27mted-gif\e[39m\r\n  \e[90mfeature/highlight-candidate-\e[7mma\e[27mtch\e[39m\r\n  \e[90m\e[7mma\e[27mster\e[39m\e[3A\e[G\e[16C"
+  - delay: 175
+    content: "s\e[J\r\n> \e[34m\e[7mmas\e[27mter\e[39m\e[1A\e[G\e[17C"
+  - delay: 175
+    content: "t\e[J\r\n> \e[34m\e[7mmast\e[27mer\e[39m\e[1A\e[G\e[18C"
+  - delay: 175
+    content: "e\e[J\r\n> \e[34m\e[7mmaste\e[27mr\e[39m\e[1A\e[G\e[19C"
+  - delay: 175
+    content: "r\e[J\r\n> \e[34m\e[7mmaster\e[27m\e[39m\e[1A\e[G\e[20C"
+  - delay: 175
+    content: "\e[F\r\n\e[J"
+  - delay: 22
+    content: "Your branch is up to date with 'origin/master'.\r\nSwitched to branch 'master'\r\n\r\n\e]0;miguel@helene:~/github/msg-labs/git-branch\a> "
+  - delay: 750
+    content: m
+  - delay: 100
+    content: s
+  - delay: 100
+    content: g
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: g
+  - delay: 100
+    content: i
+  - delay: 100
+    content: t
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: b
+  - delay: 100
+    content: r
+  - delay: 100
+    content: a
+  - delay: 100
+    content: 'n'
+  - delay: 100
+    content: c
+  - delay: 100
+    content: h
+  - delay: 100
+    content: ' '
+  - delay: 100
+    content: h
+  - delay: 100
+    content: o
+  - delay: 100
+    content: t
+  - delay: 100
+    content: "\r\n"
+  - delay: 50
+    content: Branch name > hot
+  - delay: 7
+    content: "\e[J\r\n> \e[34m\e[7mhot\e[27mfix/duplicate-render\e[39m\r\n  \e[90m\e[7mhot\e[27mfix/missing-carriage-return\e[39m\e[2A\e[G\e[17C"
+  - delay: 175
+    content: "f\e[J\r\n> \e[34m\e[7mhotf\e[27mix/duplicate-render\e[39m\r\n  \e[90m\e[7mhotf\e[27mix/missing-carriage-return\e[39m\e[2A\e[G\e[18C"
+  - delay: 175
+    content: "i\e[J\r\n> \e[34m\e[7mhotfi\e[27mx/duplicate-render\e[39m\r\n  \e[90m\e[7mhotfi\e[27mx/missing-carriage-return\e[39m\e[2A\e[G\e[19C"
+  - delay: 175
+    content: "x\e[J\r\n> \e[34m\e[7mhotfix\e[27m/duplicate-render\e[39m\r\n  \e[90m\e[7mhotfix\e[27m/missing-carriage-return\e[39m\e[2A\e[G\e[20C"
+  - delay: 175
+    content: "/\e[J\r\n> \e[34m\e[7mhotfix/\e[27mduplicate-render\e[39m\r\n  \e[90m\e[7mhotfix/\e[27mmissing-carriage-return\e[39m\e[2A\e[G\e[21C"
+  - delay: 175
+    content: "d\e[J\r\n> \e[34m\e[7mhotfix/d\e[27muplicate-render\e[39m\e[1A\e[G\e[22C"
+  - delay: 175
+    content: "u\e[J\r\n> \e[34m\e[7mhotfix/du\e[27mplicate-render\e[39m\e[1A\e[G\e[23C"
+  - delay: 175
+    content: "\e[F\r\n\e[J"
+  - delay: 22
+    content: "Switched to branch 'hotfix/duplicate-render'\r\n\r\n\e]0;miguel@helene:~/github/msg-labs/git-branch\a> "
+  - delay: 500
+    content: "\r\n"

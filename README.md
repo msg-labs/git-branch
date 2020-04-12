@@ -1,10 +1,12 @@
 # git-branch
 
-> Move branch from your terminal with ease.
+> Navigate git branches with ease
 
 Git branch allows you to interactively search a branch name on the current
 git repository. It displays a list of candidates and a promp to filter the
 results.
+
+![Demo of git-branch](./public/demo.gif)
 
 ## Install
 
@@ -38,7 +40,6 @@ In no special order I'd like to have:
 * Handle all of the issues below from the Github projects tab
 * Testing
 * Flag merged
-* .gif with a demo of the functionality
 * Remote branches
 * intelligent switch for package.json
     Checks if there are any differences, if so it could
