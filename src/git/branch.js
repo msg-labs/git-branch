@@ -25,8 +25,6 @@ const exceptionHandler = error => {
 
 };
 
-module.exports = exceptionHandler;
-
 
 /**
  * Executes git branch on the current directory returning a list of branches
