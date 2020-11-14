@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/msg-labs/git-branch/compare/v1.4.4...v1.5.0) (2020-11-14)
+
+
+### Features
+
+* adds --sortBy option ([#15](https://github.com/msg-labs/git-branch/issues/15)) ([dfd9063](https://github.com/msg-labs/git-branch/commit/dfd9063e783209c7cbfbe664b6f54c7129968c79))
+
 ### [1.4.4](https://github.com/msg-labs/git-branch/compare/v1.4.3...v1.4.4) (2020-04-12)
 
 ### [1.4.3](https://github.com/msg-labs/git-branch/compare/v1.4.2...v1.4.3) (2020-04-12)
