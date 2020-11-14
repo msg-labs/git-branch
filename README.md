@@ -29,8 +29,8 @@ Usage: msg-git-branch [options] [search...]
 Options:
   -V, --version         output the version number
   -l, --limit [number]  limits the line outputs (default: 10)
-  -h, --help            output usage information
-
+  -s, --sortBy [field]  sorts the output (default: "refname")
+  -h, --help            display help for command
 ```
 
 ## Wishlist

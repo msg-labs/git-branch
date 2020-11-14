@@ -18,10 +18,11 @@ cli.parse( process.argv );
 const searchOptions = {
     input: cli.search,
     limit: cli.limit,
-    matchField: ( { name } ) => name
+    matchField: ( { name } ) => name,
+    sortCandidates: false
 };
 
-getBranches()
+getBranches( cli.sortBy )
     .then( branches => prompt(
         branches,
         'Branch name > ',

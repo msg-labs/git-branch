@@ -43,7 +43,9 @@ const renderLine = ( branch, index, candidates, search ) => {
 
     const branchName = branch.name.replace( search, chalk.inverse( search ) );
 
-    return `${ format.flag } ${ format.color( branchName ) }`;
+    const lastUpdate = branch.lastUpdate ? ` ${ branch.lastUpdate }` : '';
+
+    return `${ format.flag } ${ format.color( branchName ) }${ lastUpdate }`;
 
 };
 

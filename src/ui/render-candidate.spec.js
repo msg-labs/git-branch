@@ -72,4 +72,17 @@ describe( 'render-candidate', () => {
 
     } );
 
+    it( 'displays dates if the data is available on the candiate', () => {
+
+        expect.assertions( 1 );
+
+        const line = renderCandidate( {
+            lastUpdate: '5 hours',
+            name: 'test'
+        }, 1, [], '' );
+        const mock = `  ${ chalk.gray( 'test' ) } 5 hours`;
+
+        expect( line ).toStrictEqual( mock );
+    } );
+
 } );

@@ -5,9 +5,6 @@ const exec = promisify( require( 'child_process' ).exec );
 // Application
 const parser = require( './branch-parser.js' );
 
-
-const COMMAND = 'git branch';
-
 const options = {
     cwd: process.cwd(),
     encoding: 'utf8'
@@ -25,24 +22,33 @@ const exceptionHandler = error => {
 
 };
 
-module.exports = exceptionHandler;
-
 
 /**
  * Executes git branch on the current directory returning a list of branches
- * @returns {Promise<String>} Promise containing the result of git branch
+ *
+ * @param {string} sortBy Field to sort by. By default entries will be sorted
+ * by refname.
+ *
+ * @returns {Promise<String>} Promise containing the result of git branch.
+ *
+ * @see `man git-for-each-ref` for more options and advanced usage of the sort
+ * by.
  */
-const branch = () => exec( COMMAND, options )
-    .then( ( {
-        stdout,
-        stderr
-    } ) => {
-        if ( stderr !== '' ) {
-            throw new Error( stderr );
-        }
-        return stdout;
-    } )
-    .then( parser )
-    .catch( exceptionHandler );
+const branch = ( sortBy = 'refname' ) => {
+    const COMMAND = `git branch --format="%(HEAD):%(refname:short):%(authordate:relative)" --sort=${ sortBy }`;
+
+    return exec( COMMAND, options )
+        .then( ( {
+            stdout,
+            stderr
+        } ) => {
+            if ( stderr !== '' ) {
+                throw new Error( stderr );
+            }
+            return stdout;
+        } )
+        .then( parser )
+        .catch( exceptionHandler );
+};
 
 module.exports = branch;
