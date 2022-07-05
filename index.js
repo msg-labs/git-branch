@@ -13,16 +13,18 @@ const getBranches = require( './src/git/branch.js' );
 const renderCandidate = require( './src/ui/render-candidate.js' );
 
 
-cli.parse( process.argv );
+cli.parse();
+
+const options = cli.opts();
 
 const searchOptions = {
-    input: cli.search,
-    limit: cli.limit,
+    input: options.search,
+    limit: options.limit,
     matchField: ( { name } ) => name,
     sortCandidates: false
 };
 
-getBranches( cli.sortBy )
+getBranches( options.sortBy )
     .then( branches => prompt(
         branches,
         'Branch name > ',
