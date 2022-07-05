@@ -1,0 +1,20 @@
+name: Tests the application when a merge request is created
+
+on:
+  pull_request:
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Installing dependencies
+      run: npm ci
+    - name: Linting project
+      run: npm run lint
+    - name: Running tests
+      run: npm test
