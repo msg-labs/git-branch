@@ -21,7 +21,7 @@ describe( 'cli', () => {
 
             cli.parse( argv );
 
-            expect( cli.search ).toStrictEqual( 'some text' );
+            expect( cli.opts().search ).toStrictEqual( 'some text' );
         } );
 
     } );
@@ -44,29 +44,29 @@ describe( 'cli', () => {
 
             cli.parse( argv );
 
-            expect( cli.limit ).toStrictEqual( 3 );
+            expect( cli.opts().limit ).toStrictEqual( 3 );
 
         } );
 
         it( 'has a default value of ten', () => {
 
             expect.assertions( 1 );
-            const argv = 'node index -l'.split( ' ' );
+            const argv = 'node index'.split( ' ' );
 
             cli.parse( argv );
 
-            expect( cli.limit ).toStrictEqual( 10 );
+            expect( cli.opts().limit ).toStrictEqual( 10 );
 
         } );
 
         it( 'has a long version', () => {
 
             expect.assertions( 1 );
-            const argv = 'node index --limit'.split( ' ' );
+            const argv = 'node index'.split( ' ' );
 
             cli.parse( argv );
 
-            expect( cli.limit ).toStrictEqual( 10 );
+            expect( cli.opts().limit ).toStrictEqual( 10 );
 
         } );
 
