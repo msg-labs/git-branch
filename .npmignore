@@ -1,0 +1,7 @@
+node_modules
+.husky
+.github
+public
+src/**/*.spec.js
+.eslintrc
+CHANGELOG.md
